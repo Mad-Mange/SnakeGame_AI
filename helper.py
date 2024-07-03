@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from IPython import display
+from game import SPEED
 
 plt.ion()
 
@@ -7,7 +8,7 @@ def plot(scores, mean_scores):
     display.clear_output(wait=True)
     display.display(plt.gcf())
     plt.clf()
-    plt.title('Training...')
+    plt.title(f'Training... @ {SPEED} speed')
     plt.xlabel('Number of Games')
     plt.ylabel('Score')
     plt.plot(scores)
